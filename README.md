@@ -1,36 +1,294 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SP3-UI
 
-## Getting Started
+**StoryPoint3-UI • Save 3 Story Points**
 
-First, run the development server:
+🟢 System Running
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+**StoryPoint3-UI** feels like it saves developers **3 story points** of effort with minimalist, performance-first components.
+
+✓ Designed for AI tools and copilots to understand  
+✓ Simple for developers to implement and maintain  
+✓ One way to do things, done right
+
+---
+
+## Accordion Component Demo
+
+<details>
+<summary><strong>Getting Started</strong></summary>
+
+Welcome to SP3-UI! This minimalist design library focuses on:
+
+• **Performance-first approach**  
+• **Developer experience**  
+• **Easy customization**  
+• **Minimal bundle size**
+
+</details>
+
+<details>
+<summary><strong>Installation</strong></summary>
+
+```
+coming soon
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Import the components you need:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```tsx
+import { Accordion, AS, AH, AC } from 'sp3-ui';
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+</details>
 
-## Learn More
+<details>
+<summary><strong>Available Components</strong></summary>
 
-To learn more about Next.js, take a look at the following resources:
+### Current Components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Accordion** - Collapsible content sections with customizable themes
+- More components coming soon...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Component Features
 
-## Deploy on Vercel
+- TypeScript support out of the box
+- Tailwind CSS integration
+- Dark mode support
+- Accessibility compliant
+- Customizable color themes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+</details>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<details>
+<summary><strong>Usage Example</strong></summary>
+
+```tsx
+import { Accordion, AS, AH, AC } from 'sp3-ui';
+
+function MyApp() {
+  return (
+    <Accordion name="demo" color="blue">
+      <AS id="section1">
+        <AH>Getting Started</AH>
+        <AC>
+          <p>This is the content for section 1</p>
+        </AC>
+      </AS>
+      
+      <AS id="section2">
+        <AH>Advanced Usage</AH>
+        <AC>
+          <p>This is the content for section 2</p>
+        </AC>
+      </AS>
+    </Accordion>
+  );
+}
+```
+
+### Component Reference
+- `Accordion` = Main accordion container
+- `AS` = Accordion Section (individual collapsible section)
+- `AH` = Accordion Header (clickable trigger)
+- `AC` = Accordion Content (collapsible content area)
+
+</details>
+
+<details>
+<summary><strong>Customization</strong></summary>
+
+### Color Themes
+
+The accordion component supports multiple color options:
+
+**Predefined Colors:**
+- `blue` (default)
+- `red`
+- `green`  
+- `purple`
+- `amber`
+- `gray`
+
+**Custom Colors:**
+- Any hex color code (e.g., `#456456`)
+
+### Props
+
+#### Accordion Props
+- `name: string` - Unique identifier for the accordion
+- `color?: string` - Color theme or hex code
+- `enableMultiSectionOpen?: boolean` - Allow multiple sections open
+- `defaultOpen?: string[]` - Array of section IDs to open by default
+- `className?: string` - Additional CSS classes
+
+#### AS (Accordion Section) Props
+- `id: string` - Unique identifier for the section
+- `defaultOpen?: boolean` - Whether section starts open
+- `className?: string` - Additional CSS classes
+
+#### AH (Accordion Header) Props
+- `children: ReactNode` - Header content
+- `className?: string` - Additional CSS classes
+
+#### AC (Accordion Content) Props
+- `children: ReactNode` - Content to display when expanded
+- `className?: string` - Additional CSS classes
+
+</details>
+
+---
+
+## Color Variants Showcase
+
+The accordion component supports multiple color themes out of the box. Try clicking on different accordions below to see the color variations:
+
+### Green Theme
+<details>
+<summary><strong>Eco-Friendly Design</strong></summary>
+
+Perfect for environmental, sustainability, or nature-focused applications. The green theme provides a calm, organic feeling.
+
+```tsx
+<Accordion color="green" name="eco-demo">
+  <AS id="eco-tips">
+    <AH>Environmental Tips</AH>
+    <AC>Content here...</AC>
+  </AS>
+</Accordion>
+```
+
+</details>
+
+### Purple Theme
+<details>
+<summary><strong>Creative Solutions</strong></summary>
+
+Great for creative, artistic, or premium applications. Purple conveys creativity, luxury, and innovation.
+
+```tsx
+<Accordion color="purple" name="creative-demo">
+  <AS id="design-tips">
+    <AH>Design Guidelines</AH>
+    <AC>Content here...</AC>
+  </AS>
+</Accordion>
+```
+
+</details>
+
+### Red Theme
+<details>
+<summary><strong>Important Notice</strong></summary>
+
+Ideal for urgent information, warnings, or critical system messages. Red draws immediate attention.
+
+```tsx
+<Accordion color="red" name="alert-demo">
+  <AS id="urgent">
+    <AH>System Alert</AH>
+    <AC>Content here...</AC>
+  </AS>
+</Accordion>
+```
+
+</details>
+
+### Amber Theme
+<details>
+<summary><strong>Warning Message</strong></summary>
+
+Perfect for cautionary information, tips, or moderate alerts. Amber provides a balanced warning tone.
+
+```tsx
+<Accordion color="amber" name="warning-demo">
+  <AS id="caution">
+    <AH>Important Information</AH>
+    <AC>Content here...</AC>
+  </AS>
+</Accordion>
+```
+
+</details>
+
+### Custom Colors
+<details>
+<summary><strong>Brand Colors</strong></summary>
+
+Use your own brand colors with hex codes:
+
+```tsx
+<Accordion color="#456456" name="brand-demo">
+  <AS id="brand">
+    <AH>Brand Guidelines</AH>
+    <AC>Content here...</AC>
+  </AS>
+</Accordion>
+```
+
+</details>
+
+---
+
+## Development
+
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, or pnpm
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/sp3-ui.git
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Building
+
+```bash
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+## Contributing
+
+We welcome contributions! Please read our contributing guidelines before submitting PRs.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+---
+
+## Support
+
+- 📧 Email: support@sp3-ui.dev
+- 🐛 Issues: [GitHub Issues](https://github.com/your-username/sp3-ui/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/your-username/sp3-ui/discussions)
+
+---
+
+<div align="center">
+  <strong>Built with ❤️ for developers who value simplicity and performance</strong>
+</div>

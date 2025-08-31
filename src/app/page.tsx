@@ -89,7 +89,6 @@ export default function Home() {
             name="main-demo"
             enableMultiSectionOpen={false}
             defaultOpen={["getting-started"]}
-            color="green"
           >
             <AS id="getting-started">
               <AH>Getting Started</AH>
